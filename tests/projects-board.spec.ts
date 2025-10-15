@@ -9,7 +9,7 @@ const loginInfo = {
 };
 
 for (const { name, project, column, tags } of taskList) {
-  test(`Verify ${name} appear correctly on projects board`, async ({ page }) => {
+  test(`Verify ${name} appears correctly on projects board`, async ({ page }) => {
     const login = new LoginPage(page);
     const projects = new ProjectsPage(page);
 
