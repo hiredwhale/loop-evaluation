@@ -16,12 +16,10 @@ for (const { name, project, column, tags } of taskList) {
     await page.goto('/');
     await login.logIntoAccount(loginInfo.username, loginInfo.password);
 
-    for (const task of taskList) {
-      await projects.selectProject(project);
-      await projects.verifyTaskIsInColumn(column, name);
-      for (let tag of tags) {
-        await projects.verifyTaskHasTag(name, tag);
-      }
+    await projects.selectProject(project);
+    await projects.verifyTaskIsInColumn(column, name);
+    for (let tag of tags) {
+      await projects.verifyTaskHasTag(name, tag);
     }
   });
 }
