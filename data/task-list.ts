@@ -14,7 +14,7 @@ export const taskList = [
     {
         "name": "Design system updates",
         "project": "Web Application",
-        "column": "To Do",
+        "column": "In Progress",
         "tags": [ "Design" ]
     },
     {
